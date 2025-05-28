@@ -1,0 +1,464 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+
+    --primary: 30 92% 64%;
+    --primary-foreground: 210 40% 98%;
+
+    --secondary: 35 100% 96%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
+
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+
+    --accent: 0 73% 49%;
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 30 92% 64%;
+
+    --radius: 0.75rem;
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  * {
+    @apply border-border;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 80px;
+  }
+  
+  body {
+    @apply bg-background text-foreground font-sans;
+  }
+  
+  body.rtl-active {
+    font-family: 'Cairo', 'Inter', sans-serif;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-heading;
+  }
+  
+  .rtl-active h1, 
+  .rtl-active h2, 
+  .rtl-active h3, 
+  .rtl-active h4, 
+  .rtl-active h5, 
+  .rtl-active h6 {
+    font-family: 'Cairo', 'Poppins', sans-serif;
+  }
+}
+
+@layer components {
+  .section {
+    @apply py-16 md:py-24 px-6 md:px-8 lg:px-0;
+  }
+
+  .container-custom {
+    @apply max-w-7xl mx-auto px-6 lg:px-8;
+  }
+
+  .button-primary {
+    @apply bg-primary text-white rounded-lg px-6 py-3 font-medium transition-all hover:bg-primary-dark hover:shadow-md flex items-center justify-center;
+  }
+
+  .button-secondary {
+    @apply bg-secondary text-foreground rounded-lg px-6 py-3 font-medium transition-all hover:bg-secondary-dark hover:shadow-md border border-gray-200;
+  }
+
+  .button-accent {
+    @apply bg-accent text-white rounded-lg px-6 py-3 font-medium transition-all hover:bg-accent/90 hover:shadow-md;
+  }
+
+  .heading-xl {
+    @apply text-3xl md:text-4xl lg:text-5xl font-bold leading-tight;
+  }
+
+  .heading-lg {
+    @apply text-2xl md:text-3xl lg:text-4xl font-bold leading-tight;
+  }
+
+  .heading-md {
+    @apply text-xl md:text-2xl font-bold leading-tight;
+  }
+
+  .heading-sm {
+    @apply text-lg md:text-xl font-bold leading-tight;
+  }
+
+  .fade-in-scroll {
+    @apply opacity-0;
+    animation: fadeIn 0.5s ease-out forwards;
+  }
+
+  .card-shadow {
+    @apply shadow-lg hover:shadow-xl transition-shadow duration-300;
+  }
+  
+  .card-warm {
+    @apply bg-gradient-to-br from-white to-secondary border border-secondary/50 rounded-lg shadow-md hover:shadow-lg transition-all;
+  }
+  
+  .glass-effect {
+    @apply backdrop-blur-sm bg-white/80 border border-white/20 shadow-md;
+  }
+
+  .text-gradient {
+    @apply bg-gradient-to-r from-primary to-primary-light bg-clip-text text-transparent;
+  }
+  
+  /* Enhanced Smartphone Mockup */
+  .smartphone-mockup {
+    position: relative;
+    width: 280px;
+    height: 550px;
+    background-color: #111;
+    border-radius: 36px;
+    padding: 10px;
+    box-shadow: 
+      0 10px 30px rgba(0, 0, 0, 0.2),
+      0 20px 40px rgba(0, 0, 0, 0.1),
+      inset 0 0 0 2px rgba(255, 255, 255, 0.05);
+    overflow: hidden;
+  }
+  
+  .smartphone-notch {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 40%;
+    height: 24px;
+    background-color: #111;
+    border-bottom-left-radius: 16px;
+    border-bottom-right-radius: 16px;
+    z-index: 10;
+  }
+  
+  .smartphone-screen {
+    width: 100%;
+    height: calc(100% - 10px);
+    background-color: #fff;
+    border-radius: 28px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+  }
+  
+  .smartphone-button {
+    position: absolute;
+    bottom: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 40%;
+    height: 5px;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 3px;
+  }
+  
+  /* Enhanced POS Terminal Mockup */
+  .pos-terminal-mockup {
+    position: relative;
+    width: 100%;
+    max-width: 600px;
+    background: linear-gradient(to bottom, #444, #333);
+    border-radius: 16px;
+    padding: 12px;
+    box-shadow: 
+      0 15px 35px rgba(0, 0, 0, 0.25),
+      0 5px 15px rgba(0, 0, 0, 0.15),
+      inset 0 0 0 1px rgba(255, 255, 255, 0.1);
+  }
+  
+  .pos-terminal-screen {
+    position: relative;
+    width: 100%;
+    height: 400px;
+    background-color: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+  }
+  
+  .pos-terminal-base {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 20%;
+    height: 30px;
+  }
+  
+  .card-reader {
+    width: 60px;
+    height: 8px;
+    background-color: #222;
+    border-radius: 4px;
+  }
+  
+  .card-slot {
+    width: 40px;
+    height: 4px;
+    background-color: #222;
+    border-radius: 2px;
+  }
+}
+
+.animate-delay-100 {
+  animation-delay: 100ms;
+}
+
+.animate-delay-200 {
+  animation-delay: 200ms;
+}
+
+.animate-delay-300 {
+  animation-delay: 300ms;
+}
+
+.animate-delay-400 {
+  animation-delay: 400ms;
+}
+
+.animate-delay-500 {
+  animation-delay: 500ms;
+}
+
+/* RTL-specific animations */
+.rtl-animate {
+  animation-name: rtlReveal !important;
+}
+
+.reveal {
+  position: relative;
+  transform: translateY(40px);
+  opacity: 0;
+  transition: all 0.8s ease;
+}
+
+.reveal.active {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+/* RTL animation keyframe */
+@keyframes rtlReveal {
+  0% {
+    transform: translateX(40px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* Standard LTR animation */
+@keyframes ltrReveal {
+  0% {
+    transform: translateX(-40px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* Float animation */
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+.animate-float {
+  animation: float 4s ease-in-out infinite;
+}
+
+/* RTL support for spacing utilities */
+[dir="rtl"] .space-x-1 > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-x-reverse: 1;
+}
+
+[dir="rtl"] .space-x-2 > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-x-reverse: 1;
+}
+
+[dir="rtl"] .space-x-3 > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-x-reverse: 1;
+}
+
+[dir="rtl"] .space-x-4 > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-x-reverse: 1;
+}
+
+[dir="rtl"] .space-x-5 > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-x-reverse: 1;
+}
+
+[dir="rtl"] .space-x-6 > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-x-reverse: 1;
+}
+
+[dir="rtl"] .space-x-8 > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-x-reverse: 1;
+}
+
+/* RTL support for margins */
+[dir="rtl"] .ml-1 {
+  margin-left: 0;
+  margin-right: 0.25rem;
+}
+
+[dir="rtl"] .ml-2 {
+  margin-left: 0;
+  margin-right: 0.5rem;
+}
+
+[dir="rtl"] .ml-3 {
+  margin-left: 0;
+  margin-right: 0.75rem;
+}
+
+[dir="rtl"] .ml-4 {
+  margin-left: 0;
+  margin-right: 1rem;
+}
+
+[dir="rtl"] .mr-1 {
+  margin-right: 0;
+  margin-left: 0.25rem;
+}
+
+[dir="rtl"] .mr-2 {
+  margin-right: 0;
+  margin-left: 0.5rem;
+}
+
+[dir="rtl"] .mr-3 {
+  margin-right: 0;
+  margin-left: 0.75rem;
+}
+
+[dir="rtl"] .mr-4 {
+  margin-right: 0;
+  margin-left: 1rem;
+}
+
+/* RTL text alignment overrides */
+[dir="rtl"] .text-left {
+  text-align: right;
+}
+
+[dir="rtl"] .text-right {
+  text-align: left;
+}
+
+/* Ensure icons rotate properly in RTL */
+[dir="rtl"] .transform-rtl {
+  transform: scaleX(-1);
+}
+
+/* Enhanced responsive Design */
+@media (max-width: 640px) {
+  .smartphone-mockup {
+    width: 240px;
+    height: 470px;
+    transform: scale(0.95);
+    margin: 0 auto;
+  }
+  
+  .pos-terminal-mockup {
+    transform: scale(0.9);
+    margin: 0 auto;
+  }
+  
+  .pos-terminal-screen {
+    height: 360px;
+  }
+}
+
+@media (max-width: 480px) {
+  .smartphone-mockup {
+    width: 220px;
+    height: 430px;
+    transform: scale(0.9);
+  }
+  
+  .pos-terminal-mockup {
+    transform: scale(0.8);
+  }
+  
+  .pos-terminal-screen {
+    height: 320px;
+  }
+}
+
+/* Add support for various screen sizes */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .section {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+}
+
+/* Improve line clamping for text overflow */
+.line-clamp-1 {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+}
+
+.line-clamp-2 {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+/* Fix for mobile layout issues */
+@media (max-width: 768px) {
+  .container {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+}
