@@ -1,204 +1,230 @@
-
 import React from 'react';
-import { ArrowRight, ShoppingCart, CreditCard, Store, Rocket, Zap, Users } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { cn } from '@/lib/utils';
+import l7anotLogo from '/lovable-uploads/l7anot-logo.png';
+import heroIllustration from '/lovable-uploads/hero-illustration.png';
+import moroccoMap from '/lovable-uploads/morocco-map-locations.png';
+import akhzanLogo from '/lovable-uploads/akhzan-logo-full.jpg';
 
 const Hero = () => {
-  const { t, language, direction } = useLanguage();
+  const { language, direction } = useLanguage();
   
   return (
     <section 
       id="home" 
-      className="relative min-h-screen pt-28 md:pt-32 pb-20 overflow-hidden bg-gradient-to-br from-[#E8F7FC] via-white to-[#E8F7FC]"
+      className="relative min-h-screen pt-20 pb-12 overflow-hidden bg-white"
     >
-      <div className="absolute top-0 right-0 w-full h-full overflow-hidden opacity-20 pointer-events-none">
-        <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-[#70C2E3]/10 rounded-full translate-x-1/2 -translate-y-1/2"></div>
-        <div className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-[#70C2E3]/10 rounded-full -translate-x-1/2 translate-y-1/2"></div>
-      </div>
-      
       <div className="container mx-auto px-4 relative z-10">
-        <div className="flex flex-col md:flex-row items-center gap-8 md:gap-16">
-          <div className={cn("w-full md:w-1/2", direction === 'rtl' ? 'md:order-2' : 'md:order-1')}>
-            <div className="space-y-6 max-w-xl mx-auto md:mx-0">
-              <div className="flex items-center gap-2">
-                <span className="bg-[#70C2E3]/10 text-[#70C2E3] font-semibold py-1 px-4 rounded-full inline-block reveal">
-                  {language === 'fr' ? '100% Digital' : '100% رقمي'}
-                </span>
-                <span className="bg-accent/10 text-accent font-semibold py-1 px-4 rounded-full inline-block reveal">
-                  {language === 'fr' ? 'Solutions Innovantes' : 'حلول مبتكرة'}
-                </span>
-              </div>
-              
-              <h1 className="heading-xl reveal font-extrabold">
-                {language === 'fr' 
-                  ? 'Révolutionnez Votre ' 
-                  : 'ثورة في '}
-                <span className="text-[#70C2E3]">
-                  {language === 'fr' ? 'Commerce' : 'تجارتك'}
-                </span>
-              </h1>
-              
-              <p className="text-lg text-gray-700 leading-relaxed reveal">
-                {language === 'fr'
-                  ? 'L7ANOT Smart System transforme la gestion des commerces au Maroc avec des outils digitaux innovants pour chaque aspect de votre business.'
-                  : 'نظام الحانوت سمارت سيستم يحول إدارة المتاجر في المغرب بأدوات رقمية مبتكرة لكل جانب من جوانب عملك.'}
-              </p>
-              
-              <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-4 reveal">
-                <div className="card-warm p-5 rounded-xl hover-card group shadow-md border-[#70C2E3]/20 border">
-                  <div className="flex items-center mb-3 gap-3">
-                    <div className="bg-[#70C2E3]/10 p-2 rounded-lg group-hover:bg-[#70C2E3]/20 transition-colors">
-                      <ShoppingCart className="text-[#70C2E3]" size={20} />
-                    </div>
-                    <h3 className="font-semibold">{language === 'fr' ? 'Commandes' : 'طلبات'}</h3>
-                  </div>
-                  <p className="text-sm text-gray-600">
-                    {language === 'fr' 
-                      ? 'Simplifiez vos approvisionnements' 
-                      : 'بسّط إمداداتك'}
-                  </p>
-                </div>
-                
-                <div className="card-warm p-5 rounded-xl hover-card group shadow-md border-[#70C2E3]/20 border">
-                  <div className="flex items-center mb-3 gap-3">
-                    <div className="bg-[#70C2E3]/10 p-2 rounded-lg group-hover:bg-[#70C2E3]/20 transition-colors">
-                      <CreditCard className="text-[#70C2E3]" size={20} />
-                    </div>
-                    <h3 className="font-semibold">{language === 'fr' ? 'Paiements' : 'مدفوعات'}</h3>
-                  </div>
-                  <p className="text-sm text-gray-600">
-                    {language === 'fr' 
-                      ? 'Gérez votre caisse facilement' 
-                      : 'أدر خزينتك بسهولة'}
-                  </p>
-                </div>
-                
-                <div className="card-warm p-5 rounded-xl hover-card group shadow-md border-[#70C2E3]/20 border">
-                  <div className="flex items-center mb-3 gap-3">
-                    <div className="bg-[#70C2E3]/10 p-2 rounded-lg group-hover:bg-[#70C2E3]/20 transition-colors">
-                      <Store className="text-[#70C2E3]" size={20} />
-                    </div>
-                    <h3 className="font-semibold">{language === 'fr' ? 'Gestion' : 'إدارة'}</h3>
-                  </div>
-                  <p className="text-sm text-gray-600">
-                    {language === 'fr' 
-                      ? 'Contrôlez votre inventaire' 
-                      : 'تحكم في مخزونك'}
-                  </p>
-                </div>
-              </div>
-              
-              <div className="flex flex-col sm:flex-row gap-4 pt-6 reveal">
-                <a 
-                  href="#solutions" 
-                  className="bg-[#70C2E3] text-white rounded-lg px-6 py-3 font-medium transition-all hover:bg-[#50B2D3] hover:shadow-md flex items-center justify-center group relative overflow-hidden"
-                >
-                  <span className="relative z-10 flex items-center">
-                    {language === 'fr' ? 'Découvrir nos solutions' : 'اكتشف حلولنا'} 
-                    <ArrowRight className={cn(
-                      "transition-transform", 
-                      direction === 'rtl' ? "mr-2 transform rotate-180 group-hover:-translate-x-1" : "ml-2 group-hover:translate-x-1"
-                    )} size={18} />
-                  </span>
-                  <span className={cn(
-                    "absolute inset-0 bg-accent/80 transform scale-x-0 transition-transform duration-300 group-hover:scale-x-100",
-                    direction === 'rtl' ? "origin-right" : "origin-left"
-                  )}></span>
-                </a>
-                
-                <a 
-                  href="#contact" 
-                  className="border border-[#70C2E3] text-[#70C2E3] bg-transparent rounded-lg px-6 py-3 font-medium transition-colors hover:bg-[#70C2E3]/5 flex items-center justify-center"
-                >
-                  {language === 'fr' ? 'Nous contacter' : 'اتصل بنا'}
-                </a>
-              </div>
-            </div>
-          </div>
+
+        {/* Main Title */}
+        <div className="text-center mb-8 reveal">
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold mb-4 text-[#70C2E3]">
+            {language === 'fr' 
+              ? 'La nouvelle génération de distribution au Maroc' 
+              : 'الجيل الجديد من التوزيع في المغرب'}
+          </h1>
           
-          <div className={cn("w-full md:w-1/2 relative", direction === 'rtl' ? 'md:order-1' : 'md:order-2')}>
-            <div className="relative z-10 animate-float">
+          <p className="text-base md:text-lg text-gray-700 max-w-4xl mx-auto leading-relaxed">
+            {language === 'fr'
+              ? 'L\'ANOT SMART SYSTEM connecte les producteurs, distributeurs et commerçants via des solutions logistiques, digitales et retail intelligentes.'
+              : 'نظام الحانوت الذكي يربط المنتجين والموزعين والتجار عبر حلول لوجستية ورقمية وتجزئة ذكية.'}
+          </p>
+        </div>
+
+        {/* Main Illustration */}
+        <div className="relative mb-12 reveal">
+          <div className="bg-white rounded-3xl shadow-2xl border-4 border-gray-200 p-4 md:p-8 relative overflow-visible">
+            <div className="relative">
               <img 
-                src="/lovable-uploads/40a3b396-968a-425e-87d3-8edee70213e7.png" 
-                alt="L7ANOT Smart System" 
-                className="rounded-2xl shadow-2xl w-full object-cover"
+                src={heroIllustration} 
+                alt="L7ANOT Distribution System" 
+                className="w-full h-auto rounded-xl"
               />
               
-              {/* Feature badges around the image */}
-              <div className={cn(
-                "absolute -top-4 md:-top-6 left-12 bg-white text-[#70C2E3] p-3 rounded-xl shadow-lg transform -rotate-3",
-                "flex items-center gap-2"
-              )}>
-                <Rocket size={20} className="text-[#70C2E3]" />
-                <span className="font-bold text-sm">
-                  {language === 'fr' ? 'Efficacité +25%' : 'كفاءة +25%'}
-                </span>
+              {/* Floating Labels/Panels */}
+              {/* Force de vente - Top Left */}
+              <div className="absolute top-[5%] left-[8%] bg-[#70C2E3]/90 text-white px-4 py-2 rounded-lg shadow-lg z-10 hidden md:block animate-float">
+                <p className="font-bold text-sm whitespace-nowrap">
+                  {language === 'fr' ? 'Force de vente' : 'قوة المبيعات'}
+                </p>
+                <p className="text-xs opacity-90">
+                  {language === 'fr' ? 'Équipe commerciale dédiée' : 'فريق تجاري متخصص'}
+                </p>
               </div>
-              
-              <div className={cn(
-                "absolute -bottom-4 md:-bottom-6 right-12 bg-white text-[#70C2E3] p-3 rounded-xl shadow-lg transform rotate-3",
-                "flex items-center gap-2"
-              )}>
-                <Users size={20} className="text-[#70C2E3]" />
-                <span className="font-bold text-sm">
-                  {language === 'fr' ? '+200 Commerçants' : '+200 تاجر'}
-                </span>
+
+              {/* Logistique - Top Right */}
+              <div className="absolute top-[8%] right-[15%] bg-[#70C2E3]/90 text-white px-4 py-2 rounded-lg shadow-lg z-10 hidden md:block animate-float" style={{ animationDelay: '0.5s' }}>
+                <p className="font-bold text-sm whitespace-nowrap">
+                  {language === 'fr' ? 'Logistique' : 'اللوجستيات'}
+                </p>
+                <p className="text-xs opacity-90">
+                  {language === 'fr' ? 'Distribution efficace' : 'توزيع فعال'}
+                </p>
               </div>
-              
-              <div className={cn(
-                "absolute bottom-1/3 -right-4 md:-right-10 bg-[#70C2E3] text-white p-4 rounded-xl shadow-lg",
-                "flex items-center gap-2"
-              )}>
-                <Zap size={20} className="text-white" />
-                <div>
-                  <p className="font-bold text-sm">{language === 'fr' ? 'Smart Store' : 'متجر ذكي'}</p>
-                  <p className="text-xs opacity-90">{language === 'fr' ? 'Innovation' : 'ابتكار'}</p>
+
+              {/* Comité de pilotage - Left Side */}
+              <div className="absolute top-[35%] left-[5%] bg-[#70C2E3]/90 text-white px-4 py-2 rounded-lg shadow-lg z-10 hidden md:block animate-float" style={{ animationDelay: '1s' }}>
+                <p className="font-bold text-sm whitespace-nowrap">
+                  {language === 'fr' ? 'Comité de pilotage' : 'لجنة التوجيه'}
+                </p>
+                <p className="text-xs opacity-90">
+                  {language === 'fr' ? 'Gestion professionnelle' : 'إدارة احترافية'}
+                </p>
+              </div>
+
+              {/* Digitalisation avec AKHZAN - Right Side Bubble */}
+              <div className="absolute top-[25%] right-[8%] bg-white border-2 border-[#70C2E3] px-5 py-3 rounded-full shadow-xl z-10 hidden md:block animate-float" style={{ animationDelay: '1.5s' }}>
+                <div className="flex items-center gap-2">
+                  <img src={akhzanLogo} alt="AKHZAN" className="h-20 w-20 rounded-full object-cover" />
+                  <div>
+                    <p className="font-bold text-sm text-[#70C2E3] whitespace-nowrap">
+                      {language === 'fr' ? 'Digitalisation' : 'الرقمنة'}
+                    </p>
+                    <p className="text-xs text-gray-600">avec AKHZAN</p>
+                  </div>
                 </div>
               </div>
+
+              {/* Morocco Map with TT LES VILLES - Center Bottom */}
+              <div className="absolute bottom-[4%] left-[12%] z-10 hidden md:block animate-float" style={{ animationDelay: '1.5s' }}>
+                <div className="relative">
+                  <img src={moroccoMap} alt="Morocco Map" className="h-120 w-auto opacity-100" />
+                  <div className="absolute inset-0 flex items-center justify-center">
+                    <div className="bg-white/95 px-3 py-1 rounded-lg shadow-lg border border-[#70C2E3]">
+                      <p className="text-sm font-bold text-[#70C2E3] text-center whitespace-nowrap">
+                        {language === 'fr' ? 'TT LES VILLES' : 'جميع المدن'}
+                      </p>
+                      <p className="text-xs text-gray-600 text-center">
+                        {language === 'fr' ? 'Couverture nationale' : 'تغطية وطنية'}
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* 6 DÉPÔTS CENTRAUX - Bottom Right */}
+              <div className="absolute bottom-[30%] right-[12%] bg-white border-2 border-[#70C2E3] px-4 py-3 rounded-xl shadow-xl z-10 hidden md:block animate-float" style={{ animationDelay: '2s' }}>
+                <div className="text-center">
+                  <p className="text-3xl font-bold text-[#70C2E3]">6</p>
+                  <p className="text-xs font-bold text-[#70C2E3] whitespace-nowrap">
+                    {language === 'fr' ? 'DÉPÔTS' : 'مستودعات'}
+                  </p>
+                  <p className="text-xs font-bold text-[#70C2E3] whitespace-nowrap">
+                    {language === 'fr' ? 'CENTRAUX' : 'مركزية'}
+                  </p>
+                </div>
+              </div>
+            </div>
+            
+            {/* CTA Buttons */}
+            <div className="flex flex-col sm:flex-row gap-4 justify-center mt-6">
+              <a 
+                href="#contact" 
+                className="bg-[#70C2E3] text-white rounded-full px-8 py-3 font-bold text-base md:text-lg transition-all hover:bg-[#50B2D3] hover:shadow-xl flex items-center justify-center group"
+              >
+                {language === 'fr' ? 'Devenir Fournisseur partenaire' : 'كن مورداً شريكاً'}
+              </a>
+              
+              <a 
+                href="#solutions" 
+                className="bg-[#70C2E3] text-white rounded-full px-8 py-3 font-bold text-base md:text-lg transition-all hover:bg-[#50B2D3] hover:shadow-xl flex items-center justify-center"
+              >
+                {language === 'fr' ? 'Découvrir nos Solutions' : 'اكتشف حلولنا'}
+              </a>
             </div>
           </div>
         </div>
-        
-        <div className="relative mt-20 md:mt-24 pt-8 border-t border-[#70C2E3]/10 reveal">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-            <div className="flex flex-col sm:flex-row items-center sm:items-start gap-4 text-center sm:text-left">
-              <div className="w-16 h-16 rounded-full bg-[#70C2E3]/10 flex items-center justify-center">
-                <span className="font-bold text-xl text-[#70C2E3]">200+</span>
-              </div>
-              <div className={cn(direction === 'rtl' ? 'text-right' : '')}>
-                <p className="font-semibold">{language === 'fr' ? 'Commerçants' : 'تاجر'}</p>
-                <p className="text-sm text-gray-500">{language === 'fr' ? 'Nous font confiance' : 'يثقون بنا'}</p>
+
+        {/* Who Are We Section */}
+        <div className="bg-white rounded-3xl p-8 md:p-12 mb-12 reveal">
+          <div className="grid md:grid-cols-2 gap-8 items-start">
+            {/* Left Side - Text Content */}
+            <div>
+              <h2 className="text-3xl md:text-4xl font-extrabold mb-4 text-[#70C2E3]">
+                {language === 'fr' ? 'QUI SOMMES-NOUS ?' : 'من نحن؟'}
+              </h2>
+              <p className="text-lg font-semibold mb-4 text-[#70C2E3]">
+                {language === 'fr' 
+                  ? 'Un écosystème complet pour la distribution moderne' 
+                  : 'نظام بيئي متكامل للتوزيع الحديث'}
+              </p>
+              <p className="text-gray-700 leading-relaxed mb-6">
+                {language === 'fr'
+                  ? 'L\'ANOT SMART SYSTEM est une société marocaine spécialisée dans la modernisation du commerce de proximité et la gestion des B2B dans l\'alimentation générale. Son objectif principal est d\'aider les commerçants à mieux distribuer leurs produits grâce à une plateforme technologique, une logistique rationnelle et un réseau de points de vente franchisés L7ANOT'
+                  : 'نظام الحانوت الذكي هو شركة مغربية متخصصة في تحديث التجارة القريبة وإدارة B2B في المواد الغذائية العامة. هدفها الرئيسي هو مساعدة التجار على توزيع منتجاتهم بشكل أفضل من خلال منصة تقنية ولوجستيات عقلانية وشبكة من نقاط البيع المرخصة L7ANOT'}
+              </p>
+
+              <div className="space-y-4">
+                <div className="flex items-start gap-3">
+                  <div className="bg-[#70C2E3] text-white rounded-full w-8 h-8 flex items-center justify-center flex-shrink-0 font-bold">
+                    ✓
+                  </div>
+                  <div>
+                    <p className="font-bold text-[#70C2E3] text-xl">
+                      {language === 'fr' ? '+8000 points de vente ciblés' : '+8000 نقطة بيع مستهدفة'}
+                    </p>
+                  </div>
+                </div>
+                
+                <div className="flex items-start gap-3">
+                  <div className="bg-[#70C2E3] text-white rounded-full w-8 h-8 flex items-center justify-center flex-shrink-0 font-bold">
+                    ✓
+                  </div>
+                  <div>
+                    <p className="font-bold text-[#70C2E3] text-xl">
+                      {language === 'fr' ? '6 dépôts régionaux' : '6 مستودعات إقليمية'}
+                    </p>
+                  </div>
+                </div>
               </div>
             </div>
-            
-            <div className="flex flex-col sm:flex-row items-center sm:items-start gap-4 text-center sm:text-left">
-              <div className="w-16 h-16 rounded-full bg-[#70C2E3]/10 flex items-center justify-center">
-                <span className="font-bold text-xl text-[#70C2E3]">12</span>
+
+            {/* Right Side - Visual Elements */}
+            <div className="space-y-6">
+              {/* Feature boxes matching the design */}
+              <div className="bg-gradient-to-r from-[#70C2E3]/20 to-[#70C2E3]/10 p-6 rounded-2xl border-l-4 border-[#70C2E3]">
+                <div className="flex items-center gap-3 mb-2">
+                  <div className="w-12 h-12 bg-[#70C2E3] rounded-lg flex items-center justify-center">
+                    <span className="text-white text-2xl">📦</span>
+                  </div>
+                  <h3 className="text-xl font-bold text-[#70C2E3]">
+                    {language === 'fr' ? 'Distribution Moderne' : 'توزيع حديث'}
+                  </h3>
+                </div>
               </div>
-              <div className={cn(direction === 'rtl' ? 'text-right' : '')}>
-                <p className="font-semibold">{language === 'fr' ? 'Villes' : 'مدينة'}</p>
-                <p className="text-sm text-gray-500">{language === 'fr' ? 'Au Maroc' : 'في المغرب'}</p>
+
+              <div className="bg-gradient-to-r from-[#70C2E3]/20 to-[#70C2E3]/10 p-6 rounded-2xl border-l-4 border-[#70C2E3]">
+                <div className="flex items-center gap-3 mb-2">
+                  <div className="w-12 h-12 bg-[#70C2E3] rounded-lg flex items-center justify-center">
+                    <span className="text-white text-2xl">🚚</span>
+                  </div>
+                  <h3 className="text-xl font-bold text-[#70C2E3]">
+                    {language === 'fr' ? 'Logistique Intelligente' : 'لوجستيات ذكية'}
+                  </h3>
+                </div>
               </div>
-            </div>
-            
-            <div className="flex flex-col sm:flex-row items-center sm:items-start gap-4 text-center sm:text-left">
-              <div className="w-16 h-16 rounded-full bg-[#70C2E3]/10 flex items-center justify-center">
-                <span className="font-bold text-xl text-[#70C2E3]">25%</span>
+
+              <div className="bg-gradient-to-r from-[#70C2E3]/20 to-[#70C2E3]/10 p-6 rounded-2xl border-l-4 border-[#70C2E3]">
+                <div className="flex items-center gap-3 mb-2">
+                  <div className="w-12 h-12 bg-[#70C2E3] rounded-lg flex items-center justify-center">
+                    <span className="text-white text-2xl">💼</span>
+                  </div>
+                  <h3 className="text-xl font-bold text-[#70C2E3]">
+                    {language === 'fr' ? 'Plateforme Technologique' : 'منصة تقنية'}
+                  </h3>
+                </div>
               </div>
-              <div className={cn(direction === 'rtl' ? 'text-right' : '')}>
-                <p className="font-semibold">{language === 'fr' ? 'Augmentation' : 'زيادة'}</p>
-                <p className="text-sm text-gray-500">{language === 'fr' ? 'De productivité' : 'في الإنتاجية'}</p>
-              </div>
-            </div>
-            
-            <div className="flex flex-col sm:flex-row items-center sm:items-start gap-4 text-center sm:text-left">
-              <div className="w-16 h-16 rounded-full bg-[#70C2E3]/10 flex items-center justify-center">
-                <span className="font-bold text-xl text-[#70C2E3]">100%</span>
-              </div>
-              <div className={cn(direction === 'rtl' ? 'text-right' : '')}>
-                <p className="font-semibold">{language === 'fr' ? 'Solution' : 'حل'}</p>
-                <p className="text-sm text-gray-500">{language === 'fr' ? 'Numérique' : 'رقمي'}</p>
+
+              <div className="bg-gradient-to-r from-[#70C2E3]/20 to-[#70C2E3]/10 p-6 rounded-2xl border-l-4 border-[#70C2E3]">
+                <div className="flex items-center gap-3 mb-2">
+                  <div className="w-12 h-12 bg-[#70C2E3] rounded-lg flex items-center justify-center">
+                    <span className="text-white text-2xl">🏪</span>
+                  </div>
+                  <h3 className="text-xl font-bold text-[#70C2E3]">
+                    {language === 'fr' ? 'Réseau Franchisé' : 'شبكة امتياز'}
+                  </h3>
+                </div>
               </div>
             </div>
           </div>
