@@ -19,7 +19,7 @@ const Hero = () => {
 
         {/* Main Title */}
         <div className="text-center mb-8 reveal">
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold mb-4 text-[#70C2E3]">
+          <h1 className="text-4xl md:text-5xl lg:text-5xl font-extrabold mb-4 text-[#70C2E3]">
             {language === 'fr' 
               ? 'La nouvelle génération de distribution au Maroc' 
               : 'الجيل الجديد من التوزيع في المغرب'}
@@ -93,7 +93,7 @@ const Hero = () => {
                   <div className="absolute inset-0 flex items-center justify-center">
                     <div className="bg-white/95 px-3 py-1 rounded-lg shadow-lg border border-[#70C2E3]">
                       <p className="text-sm font-bold text-[#70C2E3] text-center whitespace-nowrap">
-                        {language === 'fr' ? 'TT LES VILLES' : 'جميع المدن'}
+                        {language === 'fr' ? 'Toutes Les Villes' : 'جميع المدن'}
                       </p>
                       <p className="text-xs text-gray-600 text-center">
                         {language === 'fr' ? 'Couverture nationale' : 'تغطية وطنية'}

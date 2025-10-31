@@ -95,7 +95,7 @@ const Index = () => {
         <Hero />
         <TechSolutionsSection />
         <FranchiseSection />
-        <CentraleAchatSection />
+        {/* <CentraleAchatSection /> */}
         <ContactSection />
       </main>
       <Footer />
