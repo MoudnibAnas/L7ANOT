@@ -6,6 +6,7 @@ import TechSolutionsSection from '../components/TechSolutionsSection';
 import FranchiseSection from '../components/FranchiseSection';
 import CentraleAchatSection from '../components/CentraleAchatSection';
 import ContactSection from '../components/ContactSection';
+import PartnersSection from '@/components/PartnersSection';
 import Footer from '../components/Footer';
 import ScrollToTop from '../components/ScrollToTop';
 import { useLanguage } from '../contexts/LanguageContext';
@@ -95,7 +96,8 @@ const Index = () => {
         <Hero />
         <TechSolutionsSection />
         <FranchiseSection />
-        <CentraleAchatSection />
+        {/* <CentraleAchatSection /> */}
+       <PartnersSection />
         <ContactSection />
       </main>
       <Footer />

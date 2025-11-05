@@ -77,7 +77,7 @@ const ContactSection = () => {
                   </div>
                   <div>
                     <h4 className="font-semibold mb-1">{language === 'fr' ? 'Téléphone' : 'الهاتف'}</h4>
-                    <p className="text-gray-600">+212 522 123 456</p>
+                    <p className="text-gray-600">+212 606944799</p>
                   </div>
                 </div>
                 

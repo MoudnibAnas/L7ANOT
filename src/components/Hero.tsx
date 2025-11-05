@@ -19,7 +19,7 @@ const Hero = () => {
 
         {/* Main Title */}
         <div className="text-center mb-8 reveal">
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold mb-4 text-[#70C2E3]">
+          <h1 className="text-4xl md:text-5xl lg:text-5xl font-extrabold mb-4 text-[#70C2E3]">
             {language === 'fr' 
               ? 'La nouvelle génération de distribution au Maroc' 
               : 'الجيل الجديد من التوزيع في المغرب'}
@@ -27,7 +27,7 @@ const Hero = () => {
           
           <p className="text-base md:text-lg text-gray-700 max-w-4xl mx-auto leading-relaxed">
             {language === 'fr'
-              ? 'L\'ANOT SMART SYSTEM connecte les producteurs, distributeurs et commerçants via des solutions logistiques, digitales et retail intelligentes.'
+              ? 'L7ANOT SMART SYSTEM connecte les producteurs, distributeurs et commerçants via des solutions logistiques, digitales et retail intelligentes.'
               : 'نظام الحانوت الذكي يربط المنتجين والموزعين والتجار عبر حلول لوجستية ورقمية وتجزئة ذكية.'}
           </p>
         </div>
@@ -74,7 +74,7 @@ const Hero = () => {
               </div>
 
               {/* Digitalisation avec AKHZAN - Right Side Bubble */}
-              <div className="absolute top-[25%] right-[8%] bg-white border-2 border-[#70C2E3] px-5 py-3 rounded-full shadow-xl z-10 hidden md:block animate-float" style={{ animationDelay: '1.5s' }}>
+              <div className="absolute top-[32%] right-[8%] bg-white border-2 border-[#70C2E3] px-5 py-3 rounded-full shadow-xl z-10 hidden md:block animate-float" style={{ animationDelay: '1.5s' }}>
                 <div className="flex items-center gap-2">
                   <img src={akhzanLogo} alt="AKHZAN" className="h-20 w-20 rounded-full object-cover" />
                   <div>
@@ -93,7 +93,7 @@ const Hero = () => {
                   <div className="absolute inset-0 flex items-center justify-center">
                     <div className="bg-white/95 px-3 py-1 rounded-lg shadow-lg border border-[#70C2E3]">
                       <p className="text-sm font-bold text-[#70C2E3] text-center whitespace-nowrap">
-                        {language === 'fr' ? 'TT LES VILLES' : 'جميع المدن'}
+                        {language === 'fr' ? 'Toutes Les Villes' : 'جميع المدن'}
                       </p>
                       <p className="text-xs text-gray-600 text-center">
                         {language === 'fr' ? 'Couverture nationale' : 'تغطية وطنية'}
@@ -104,7 +104,7 @@ const Hero = () => {
               </div>
 
               {/* 6 DÉPÔTS CENTRAUX - Bottom Right */}
-              <div className="absolute bottom-[30%] right-[12%] bg-white border-2 border-[#70C2E3] px-4 py-3 rounded-xl shadow-xl z-10 hidden md:block animate-float" style={{ animationDelay: '2s' }}>
+              <div className="absolute bottom-[10%] right-[12%] bg-white border-2 border-[#70C2E3] px-4 py-3 rounded-xl shadow-xl z-10 hidden md:block animate-float" style={{ animationDelay: '2s' }}>
                 <div className="text-center">
                   <p className="text-3xl font-bold text-[#70C2E3]">6</p>
                   <p className="text-xs font-bold text-[#70C2E3] whitespace-nowrap">
@@ -118,7 +118,7 @@ const Hero = () => {
             </div>
             
             {/* CTA Buttons */}
-            <div className="flex flex-col sm:flex-row gap-4 justify-center mt-6">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center mt-8">
               <a 
                 href="#contact" 
                 className="bg-[#70C2E3] text-white rounded-full px-8 py-3 font-bold text-base md:text-lg transition-all hover:bg-[#50B2D3] hover:shadow-xl flex items-center justify-center group"
@@ -151,7 +151,7 @@ const Hero = () => {
               </p>
               <p className="text-gray-700 leading-relaxed mb-6">
                 {language === 'fr'
-                  ? 'L\'ANOT SMART SYSTEM est une société marocaine spécialisée dans la modernisation du commerce de proximité et la gestion des B2B dans l\'alimentation générale. Son objectif principal est d\'aider les commerçants à mieux distribuer leurs produits grâce à une plateforme technologique, une logistique rationnelle et un réseau de points de vente franchisés L7ANOT'
+                  ? 'L7ANOT SMART SYSTEM est une société marocaine spécialisée dans la modernisation du commerce de proximité et la gestion des B2B dans l\'alimentation générale. Son objectif principal est d\'aider les commerçants à mieux distribuer leurs produits grâce à une plateforme technologique, une logistique rationnelle et un réseau de points de vente franchisés L7ANOT'
                   : 'نظام الحانوت الذكي هو شركة مغربية متخصصة في تحديث التجارة القريبة وإدارة B2B في المواد الغذائية العامة. هدفها الرئيسي هو مساعدة التجار على توزيع منتجاتهم بشكل أفضل من خلال منصة تقنية ولوجستيات عقلانية وشبكة من نقاط البيع المرخصة L7ANOT'}
               </p>
 
@@ -161,7 +161,7 @@ const Hero = () => {
                     ✓
                   </div>
                   <div>
-                    <p className="font-bold text-[#70C2E3] text-xl">
+                    <p className="font-bold text-[#70C2E3] text-2xl">
                       {language === 'fr' ? '+8000 points de vente ciblés' : '+8000 نقطة بيع مستهدفة'}
                     </p>
                   </div>
@@ -172,7 +172,7 @@ const Hero = () => {
                     ✓
                   </div>
                   <div>
-                    <p className="font-bold text-[#70C2E3] text-xl">
+                    <p className="font-bold text-[#70C2E3] text-2xl">
                       {language === 'fr' ? '6 dépôts régionaux' : '6 مستودعات إقليمية'}
                     </p>
                   </div>

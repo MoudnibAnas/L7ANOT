@@ -24,7 +24,7 @@ const Footer = () => {
             </div>
             <p className="text-gray-400 text-sm">
               {language === 'fr'
-                ? 'Solutions digitales innovantes pour les commerçants marocains. Nous révolutionnons la façon dont les commerces sont gérés.'
+                ? 'L7ANOT SMART SYSTEM connecte les marques et producteurs aux commerces de proximité à travers une plateforme intégrée de distribution, logistique et gestion digitale, pour optimiser la performance commerciale et la visibilité de leurs produits'
                 : 'حلول رقمية مبتكرة للتجار المغاربة. نحن نحدث ثورة في طريقة إدارة المتاجر.'}
             </p>
             <div className="flex space-x-4">
@@ -61,7 +61,6 @@ const Footer = () => {
                 { name: language === 'fr' ? 'Accueil' : 'الرئيسية', href: '#home' },
                 { name: language === 'fr' ? 'Solutions' : 'الحلول', href: '#solutions' },
                 { name: language === 'fr' ? 'Franchise' : 'الامتياز التجاري', href: '#franchise' },
-                { name: language === 'fr' ? 'Centrale d\'Achat' : 'التجميع المركزي', href: '#centrale' },
                 { name: language === 'fr' ? 'Contact' : 'اتصل بنا', href: '#contact' },
               ].map((link, i) => (
                 <li key={i}>
@@ -92,9 +91,6 @@ const Footer = () => {
             </h4>
             <ul className="space-y-2">
               {[
-                { name: language === 'fr' ? 'Application T9ADYTK' : 'تطبيق تقديتك', href: '#solutions' },
-                { name: language === 'fr' ? 'Système POS' : 'نظام نقاط البيع', href: '#solutions' },
-                { name: language === 'fr' ? 'Gestion des stocks' : 'إدارة المخزون', href: '#solutions' },
                 { name: language === 'fr' ? 'Analyses & Rapports' : 'التحليلات والتقارير', href: '#solutions' },
                 { name: language === 'fr' ? 'Smart Franchise' : 'امتياز ذكي', href: '#franchise' },
               ].map((solution, i) => (
@@ -158,7 +154,7 @@ const Footer = () => {
                       direction === 'rtl' ? 'ml-3' : 'mr-3'
                     )}
                   />
-                  <span>+212 522 123 456</span>
+                  <span>+212 606944799</span>
                 </a>
               </li>
               <li>
