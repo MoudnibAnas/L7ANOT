@@ -83,8 +83,8 @@ const TechSolutionsSection = () => {
               </h4>
               <p className="text-gray-700 text-sm leading-relaxed">
                 {language === 'fr'
-                  ? 'FSS gère une logistique intégrée, du stockage à la livraison finale, avec un réseau de dépôts régionaux et une flotte connectée. Livraison nationale (Taux de 48%) et la supervision temps réel des livraisons et retours.'
-                  : 'تدير FSS الخدمات اللوجستية المتكاملة، من التخزين إلى التسليم النهائي، مع شبكة من المستودعات الإقليمية وأسطول متصل.'}
+                  ? 'L7SS gère une logistique intégrée, du stockage à la livraison finale, avec un réseau de dépôts régionaux et une flotte connectée. Livraison nationale (durée de 48h ) et la supervision temps réel des livraisons et retours.'
+                  : 'تدير L7SS الخدمات اللوجستية المتكاملة، من التخزين إلى التسليم النهائي، مع شبكة من المستودعات الإقليمية وأسطول متصل.'}
               </p>
               <a
                 href="#contact"
